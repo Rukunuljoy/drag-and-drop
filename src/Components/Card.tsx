@@ -1,4 +1,4 @@
-import PlusIcon from "../icons/PlusIcon";
+
 import { useMemo, useState } from "react";
 import { Column, Id, Task } from "../types";
 import ColumnContainer from "./ColumnContainer";
@@ -15,6 +15,9 @@ import {
 import { SortableContext, arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import TaskCard from "./TaskCard";
+import PlusIcon from "../Icons/PlusIcon";
+
+
 const defaultCols: Column[] = [
     {
       id: "todo",
