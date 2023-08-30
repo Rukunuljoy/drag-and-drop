@@ -5,10 +5,10 @@ import TrashIcon from "../Icons/TrashIcon";
 import { Id, Task } from "../types";
 
 interface Props {
-    task: Task;
-    deleteTask: (id: Id) => void;
-    updateTask: (id: Id, content: string) => void;
-  }
+  task: Task;
+  deleteTask: (id: Id) => void;
+  updateTask: (id: Id, content: string) => void;
+}
 
 const TaskCard = ({ task, deleteTask, updateTask }: Props) => {
   const [mouseIsOver, setMouseIsOver] = useState(false);
@@ -32,6 +32,8 @@ const TaskCard = ({ task, deleteTask, updateTask }: Props) => {
     transition,
     transform: CSS.Transform.toString(transform),
   };
+
+  
   const toggleEditMode = () => {
     setEditMode((prev) => !prev);
     setMouseIsOver(false);
